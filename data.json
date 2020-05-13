@@ -1,0 +1,26 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://www.google.com",
+      "name": "Fernanda Silveira",
+      "birth": 631152000000,
+      "gender": "F",
+      "graduation": "Mestrado",
+      "class_type": "Presencial",
+      "subjects": "Matemática e Física",
+      "created_at": 1589328069599
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://www.google.com",
+      "name": "Guilherme Saraiva",
+      "birth": 631152000000,
+      "gender": "M",
+      "graduation": "Mestrado",
+      "class_type": "Presencial",
+      "subjects": "Matemática",
+      "created_at": 1589328457005
+    }
+  ]
+}

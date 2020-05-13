@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #7159c1;
+    --secondary-color: greenyellow;
+}
+
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(3,242,222);
+    background: linear-gradient(90deg, rgba(3,242,222,1) 0%, rgba(11,149,191,1) 37%, rgba(10,152,194,1) 64%, rgba(0,212,255,1) 100%);    
+}
+
+header{
+    background-color: rgba(69, 129, 185, 0.8);
+    padding: 32px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.links{
+    font-size: 22px;
+}
+
+.links a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.links a + a{
+    margin-left: 32px;
+}
+
+.links a:hover{
+    color: var(--secondary-color)
+}
+.links a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background-color: greenyellow;
+}
+
+.links a:hover::after{
+    width: 100%;
+    transition: width 300ms ease-in-out;
+}
+
+.card{
+    border-radius: 16px;
+    min-height: 400px;
+    width: 800px;
+    background-color: #fff;
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: 2px -2px 8px rgba(0,0,0,0.4);
+    animation: up 200ms ease;
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.details{
+    margin: 30px;
+}
+
+.details h3{
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.details .item{
+    margin-top: 16px;
+    border-top: solid 1px #aaa;
+}
+
+.details .item div:nth-child(1){
+    margin: 8px;
+    font-weight: bold;
+    color: #999;
+    font-size: 20px;
+}
+
+.details .item div:nth-child(2){
+    padding-left: 30px;
+    font-weight: normal;
+    color: black;
+    font-size: 18px;
+}
+
+.details .item span{
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 4px;
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* --- FORM --- */
+
+input{
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 8px;
+}
+
+input::placeholder{
+    color: #000;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+select{
+    padding: 3px;
+    font-size: 18px;
+}
+
+button{
+    font-size: 18px;
+    font-weight: bold;
+    color:#fff;
+    margin-top: 32px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+}

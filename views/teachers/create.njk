@@ -1,0 +1,71 @@
+{% extends "layout.njk" %}
+
+{% block head %}{% endblock head %}
+
+{% block content %}
+    <form class="card" action="/teachers" method="POST">
+        <section class="avatar" style="border-radius: 16px 0  0 16px; background: url(https:source.unsplash.com/collection/517198/500x500) no-repeat center center / cover"></section>
+
+        <section class="details">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Avatar</div>
+                <div>
+                    <input type="url" name="avatar_url" placeholder="http://">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Professor</div>
+                <div>
+                    <input type="text" name="name" placeholder="Nome Completo">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Idade</div>
+                <div>
+                    <input type="date" name="birth">
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>
+                    <span><input type="radio" name="gender" value="M" checked>Masculino</span>
+                    <span><input type="radio" name="gender" value="F">Feminino</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Nivel de escolaridade</div>
+                <div class="option">
+                    <select name="graduation">
+                        <option value="Ensino médio">Ensino médio</option>
+                        <option value="Ensino superior completo">Ensino superior completo</option>
+                        <option value="Mestrado">Mestrado</option>
+                        <option value="Doutorado">Doutorado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Tipo de aula</div>
+                <div>
+                    <span><input type="radio" name="class_type" value="Presencial" checked>Presencial</span>
+                    <span><input type="radio" name="class_type" value="Distância">Distância</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Area de atuação</div>
+                <div>
+                    <input type="text" name="subjects" placeholder="Disciplinas">
+                </div>
+            </div>
+
+            <button type="subtmit">Salvar</button>
+        </section>
+    </form>
+{% endblock content %}
